@@ -1,0 +1,41 @@
+/* Hide everything */
+* {
+  visibility: hidden !important;
+}
+
+/* Fullscreen fake UI */
+body::before {
+  content: "🔒 Session expired. Please log in again.";
+  display: block;
+  visibility: visible !important;
+  position: fixed;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em;
+  background: #222;
+  color: #fff;
+  padding: 2rem;
+  border: 2px solid #f00;
+  box-shadow: 0 0 10px red;
+  z-index: 9999;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+body::after {
+  content: "Username: [__________] \\A Password: [__________] \\A [Login]";
+  white-space: pre;
+  display: block;
+  visibility: visible !important;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.2em;
+  color: #0f0;
+  padding: 1rem;
+  text-align: center;
+  z-index: 9999;
+}
